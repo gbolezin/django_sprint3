@@ -9,7 +9,7 @@ class PublishedModel(models.Model):
         null=False,
         help_text='Снимите галочку, чтобы скрыть публикацию.'
     )
-    
+
     created_at = models.DateTimeField(
         auto_now_add=True, null=False,
         verbose_name='Добавлено'
