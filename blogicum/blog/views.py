@@ -6,12 +6,11 @@ from blog.models import Post, Category
 
 
 def get_published_posts():
-    post_list = Post.objects.filter(
+    return Post.objects.filter(
         is_published=True,
         category__is_published=True,
         pub_date__lte=datetime.datetime.now()
     ).select_related('author', 'location', 'category')
-    return post_list
 
 
 def index(request):
